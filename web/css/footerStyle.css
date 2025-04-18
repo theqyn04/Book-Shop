@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    margin-bottom: 60px; /* Đảm bảo nội dung không bị che bởi phone bar */
+}
+
+.phone-bar {
+    background-color: #AC062E; /* Màu hồng đỏ */
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    position: fixed; /* Cố định thanh ở dưới cùng */
+    bottom: 0; /* Đặt ở dưới cùng */
+    left: 0; /* Căn trái */
+    width: 100%; /* Chiều rộng đầy đủ */
+    z-index: 1000; /* Đảm bảo hiển thị trên các phần tử khác */
+}
+
+.footer {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    border-top: 1px solid #ddd;
+}
+
+.footer img.logo {
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+
+.footer img.icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    transition: transform 0.2s;
+}
+
+.footer img.icon:hover {
+    transform: scale(1.1);
+}
+
+.footer a {
+    text-decoration: none;
+    color: #000;
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.footer a:hover {
+    color: #AC062E;
+}
+
+.footer p {
+    margin-bottom: 10px;
+}
+
+.footer .section-title {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.footer .contact-info {
+    margin-bottom: 20px;
+}
+
+.footer .social-media {
+    margin-bottom: 20px;
+}
+
+.footer .store-info {
+    margin-bottom: 20px;
+}
+
+.footer .legal-info {
+    margin-bottom: 20px;
+}
+
+/* Custom styles for social icons */
+.social-icon {
+    font-size: 1.5rem; /* Kích cỡ icon */
+    color: #333; /* Màu mặc định */
+    margin: 8px 0; /* Khoảng cách giữa các icon */
+    transition: color 0.3s ease; /* Hiệu ứng chuyển màu */
+    display: block; /* Hiển thị các icon theo khối */
+    text-decoration: none; /* Loại bỏ gạch chân */
+}
+
+.social-icon:hover {
+    color: #007bff; /* Màu khi hover */
+}
+
+.link-social {
+    display: flex;
+    flex-direction: column; /* Sắp xếp các icon theo chiều dọc */
+    align-items: flex-start; /* Căn trái các icon */
+}

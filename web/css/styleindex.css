@@ -1,0 +1,113 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+h2 {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 32px;
+    color: #4CAF50;
+}
+
+/* Thumbnail styles */
+.thumbnail {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    background-color: #f9f9f9;
+    margin-bottom: 20px;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.thumbnail h3 {
+    font-size: 24px;
+    margin: 10px 0;
+    color: #555;
+}
+
+.thumbnail .price {
+    font-size: 20px;
+    color: #E91E63;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.thumbnail .btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    margin-top: 10px;
+    font-size: 18px; /* Thêm cỡ chữ 18px */
+}
+
+p {
+    font-size: 18px; /* Tăng cỡ chữ cho đoạn văn */
+    line-height: 1.6; /* Tăng khoảng cách giữa các dòng */
+}
+
+.thumbnail .btn:hover {
+    background-color: #45a049;
+}
+
+/* Responsive grid */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.col-md-3 {
+    flex: 0 0 23%;
+    max-width: 23%;
+}
+
+/* Slider styles */
+.slider {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Điều chỉnh chiều cao phù hợp */
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Đảm bảo hình ảnh phủ kín khung */
+}
+
+@media (max-width: 768px) {
+    .col-md-3 {
+        flex: 0 0 48%;
+        max-width: 48%;
+    }
+}
+
+@media (max-width: 480px) {
+    .col-md-3 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}

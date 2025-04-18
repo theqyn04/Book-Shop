@@ -1,0 +1,162 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    overflow-x: hidden;
+}
+
+h2 {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 24px;
+    color: #4CAF50;
+}
+
+/* Thumbnail styles */
+.thumbnail {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+    background-color: #fff;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Căn giữa các phần tử */
+}
+
+.thumbnail:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Đảm bảo ảnh có kích thước cố định và không bị méo */
+.thumbnail img {
+    width: 400px; /* Chiều rộng cố định */
+    height: 600px; /* Chiều cao cố định */
+    object-fit: cover; /* Đảm bảo ảnh phủ kín khung mà không bị méo */
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 15px;
+}
+
+.thumbnail h3 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #555;
+    flex-grow: 1; /* Đảm bảo tiêu đề chiếm phần còn lại */
+}
+
+.thumbnail .price {
+    font-size: 16px;
+    color: #E91E63;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.thumbnail .btn {
+    background-color: #F2A7AD;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    margin-top: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Đảm bảo nút chiếm toàn bộ chiều rộng */
+}
+
+.thumbnail .btn:hover {
+    background-color: #AC062E;
+}
+
+/* Responsive grid */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -10px; /* Bù trừ margin để loại bỏ khoảng cách thừa */
+}
+
+.col-md-3 {
+    padding: 10px; /* Tạo khoảng cách giữa các cột */
+    flex: 0 0 25%; /* 4 cột trên một hàng */
+    max-width: 25%;
+    box-sizing: border-box;
+}
+
+/* Slider container */
+.slider {
+    position: relative;
+    width: 100%; /* Chiếm toàn bộ chiều rộng của trang */
+    height: 400px; /* Điều chỉnh chiều cao phù hợp */
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+/* Slide styles */
+.slide {
+    position: absolute;
+    width: 100%; /* Chiếm toàn bộ chiều rộng của slider */
+    height: 100%; /* Chiếm toàn bộ chiều cao của slider */
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slide img {
+    width: 100%; /* Chiếm toàn bộ chiều rộng của slide */
+    height: 100%; /* Chiếm toàn bộ chiều cao của slide */
+    object-fit: cover; /* Đảm bảo hình ảnh phủ kín khung mà không bị méo */
+}
+
+.slider {
+    max-width: none; /* Loại bỏ giới hạn chiều rộng */
+    padding: 0; /* Loại bỏ padding nếu có */
+}
+
+/* Nút điều khiển */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+    left: 10px; /* Vị trí nút Previous */
+}
+
+.next {
+    right: 10px; /* Vị trí nút Next */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .thumbnail img {
+        width: 150px; /* Chiều rộng nhỏ hơn cho màn hình nhỏ */
+        height: 150px; /* Chiều cao nhỏ hơn cho màn hình nhỏ */
+    }
+}
+
+@media (max-width: 576px) {
+    .thumbnail img {
+        width: 100px; /* Chiều rộng nhỏ hơn cho màn hình rất nhỏ */
+        height: 100px; /* Chiều cao nhỏ hơn cho màn hình rất nhỏ */
+    }
+}

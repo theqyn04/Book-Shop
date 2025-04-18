@@ -1,0 +1,204 @@
+/* Reset CSS */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+/* Row và cột */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -10px;
+}
+
+.col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 10px;
+}
+
+/* Hình ảnh sản phẩm */
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Tiêu đề sản phẩm */
+h1 {
+    font-size: 2.3em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Giá sản phẩm */
+.price {
+    font-size: 2em;
+    color: #AC062E;
+    margin-bottom: 15px;
+}
+
+.price strong {
+    font-weight: bold;
+}
+
+/* Mô tả sản phẩm */
+p {
+    font-size: 1.3em;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Nút Thêm vào giỏ hàng */
+.btn-primary {
+    background-color: #F2A7AD;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn-primary:hover {
+    background-color: #AC062E;
+}
+
+
+/* Phần khuyến mãi và thông tin vận chuyển */
+.promotion-info {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.promotion-info h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.promotion-info p {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.promotion-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.promotion-info ul li {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+/* Phần vận chuyển */
+.shipping-info {
+    background-color: #f1f1f1;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.shipping-info h3 {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.shipping-info p {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Thumbnail styles */
+.thumbnail {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+    background-color: #fff;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: auto; /* Đảm bảo chiều cao tự động điều chỉnh theo nội dung */
+    width: 400px; /* Chiều rộng cố định phù hợp với ảnh */
+}
+
+.thumbnail:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Đảm bảo ảnh có kích thước cố định và không bị méo */
+.thumbnail img {
+    width: 400px; /* Chiều rộng cố định */
+    height: 600px; /* Chiều cao cố định */
+    object-fit: cover; /* Đảm bảo ảnh phủ kín khung mà không bị méo */
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 15px;
+}
+
+.thumbnail h3 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #555;
+    flex-grow: 1; /* Đảm bảo tiêu đề chiếm phần còn lại */
+}
+
+.thumbnail .price {
+    font-size: 16px;
+    color: #E91E63;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.thumbnail .btn {
+    background-color: #F2A7AD;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    margin-top: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Đảm bảo nút chiếm toàn bộ chiều rộng */
+}
+
+.thumbnail .btn:hover {
+    background-color: #AC062E;
+}
+
+/* Responsive grid */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -10px; /* Bù trừ margin để loại bỏ khoảng cách thừa */
+}
+
+.col-md-3 {
+    padding: 10px; /* Tạo khoảng cách giữa các cột */
+    flex: 0 0 25%; /* 4 cột trên một hàng */
+    max-width: 25%;
+    box-sizing: border-box;
+}

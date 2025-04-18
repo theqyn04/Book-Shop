@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+}
+.navbar-custom {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+}
+.navbar-custom .nav-link {
+    color: #333;
+}
+.navbar-custom .nav-link:hover {
+    color: #ff6347;
+}
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+.logo {
+    text-align: center;
+    flex-grow: 1;
+}
+.logo img {
+    max-width: 100%;
+    height: auto;
+}
+.link-social {
+    display: flex;
+    align-items: center;
+}
+.link-social a {
+    margin-right: 10px;
+}
+.link-social img {
+    width: 30px;
+    height: auto;
+}
+.search-container {
+    display: flex;
+    align-items: center;
+}
+.search-container form {
+    display: flex;
+    align-items: center;
+}
+.search-container input {
+    margin-right: 10px;
+}
+.menu {
+    background-color: #F2A7AD;
+    padding: 10px 0;
+    text-align: center;
+}
+.menu.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #F2A7AD;
+}
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 15px;
+}
+.menu a:hover {
+    color: #AC062E;
+}
+.highlight {
+    color: #ff0000;
+    font-weight: bold;
+}
+.slider img {
+    max-width: 100%;
+    height: auto;
+}
+.main-content {
+    padding-top: 20px; /* Điều chỉnh nếu cần */
+}
+
+
+/* Custom styles for icons */
+.nav-icon {
+    font-size: 1.2rem;
+    margin-left: 15px;
+    color: #333;
+    transition: color 0.3s ease;
+}
+.nav-icon:hover {
+    color: #007bff;
+}
+.nav-link {
+    display: flex;
+    align-items: center;
+}
+.nav-link i {
+    margin-right: 5px;
+}
+
+.social-icon {
+    font-size: 2rem;
+    color: #333;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+.social-icon:hover {
+    color: #AC062E;
+}

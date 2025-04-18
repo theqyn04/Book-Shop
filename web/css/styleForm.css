@@ -1,0 +1,82 @@
+/* style.css */
+
+body {
+    font-family: 'lato', sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+table {
+    width: 100%;
+}
+
+td {
+    padding: 10px 0;
+}
+
+input[type="text"],
+input[type="submit"],
+input[type="reset"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    
+}
+
+input[type="submit"],
+input[type="reset"] {
+    
+    color: white;
+    cursor: pointer;
+    background-color: #95A5A6;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: #95A5A6;
+}
+
+body {
+    background-image: url('img/banner1.png'); /* Đường dẫn đến hình ảnh */
+    background-size: cover; /* Đảm bảo hình ảnh phủ kín toàn bộ nền */
+    background-position: center; /* Căn giữa hình ảnh */
+    background-attachment: fixed; /* Giữ hình ảnh cố định khi cuộn trang */
+    position: relative;
+}
+
+/* Tạo lớp phủ mờ */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5); /* Màu nền trắng với độ trong suốt */
+    backdrop-filter: blur(5px); /* Hiệu ứng mờ */
+    z-index: -1; /* Đặt lớp phủ phía sau nội dung */
+}
+
+/* Đảm bảo nội dung hiển thị trên lớp phủ */
+.container-fluid {
+    position: relative;
+    z-index: 1;
+}
