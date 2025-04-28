@@ -158,6 +158,27 @@ public class BookDAO extends DBConnect {
         return book;
     }
     
+    public books getbookByName(String bname) {
+        books book = null;
+        String query = "SELECT * FROM books WHERE book_name = ?";
+        try (
+                PreparedStatement ps = conn.prepareStatement(query)) {
+            ps.setString(1, bname);
+            ResultSet rs = ps.executeQuery();
+            if (rs.next()) {
+                book = new books();
+                book.setBook_id(rs.getInt("book_id"));
+                book.setBook_name(rs.getString("book_name"));
+                book.setPrice(rs.getDouble("price"));
+                book.setImageURL(rs.getString("imageURL"));
+                book.setDescription(rs.getString("description"));
+
+            }
+        } catch (SQLException e) {
+            System.out.println(e);
+        }
+        return book;
+    }
 
 
     private double calculateTotalAmount(List<cart> cartItems) {

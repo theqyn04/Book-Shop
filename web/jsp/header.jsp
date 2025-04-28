@@ -91,7 +91,7 @@
             </div>
             <div class="search-container">
                 <form action="BookURL" method="get">
-                    <input type="hidden" name="service" value="listBook">
+                    <input type="hidden" name="service" value="searchBook">
                     <input class="form-control" type="text" name="bname" placeholder="Tìm kiếm">
                     <button class="btn btn-outline-danger" type="submit">🔍</button>
                 </form>

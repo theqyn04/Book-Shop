@@ -12,9 +12,9 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.util.List;
 import model.books;
 
-@WebServlet(name="BookController", urlPatterns={"/BookURL"})
+@WebServlet(name = "BookController", urlPatterns = {"/BookURL"})
 public class BookController extends HttpServlet {
-   
+
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
@@ -25,24 +25,24 @@ public class BookController extends HttpServlet {
             if (service == null) {
                 service = "listBook";
             }
-            if(service.equals("deleteBook")){
-                int bid=Integer.parseInt(request.getParameter("bid"));
-                int n=dao.remove(bid);
+            if (service.equals("deleteBook")) {
+                int bid = Integer.parseInt(request.getParameter("bid"));
+                int n = dao.remove(bid);
                 String deleteMessage;
-                if(n==0){
-                    deleteMessage="Xóa thất bại";
-                }else{
-                    deleteMessage="Xóa thành công";
+                if (n == 0) {
+                    deleteMessage = "Xóa thất bại";
+                } else {
+                    deleteMessage = "Xóa thành công";
                 }
-                
+
                 response.sendRedirect("BookURL");
             }
             if (service.equals("updateBook")) {
                 String submit = request.getParameter("submit");
                 if (submit == null) {// display form
-                    int bid=Integer.parseInt(request.getParameter("bid"));
-                    List<books> list = dao.getbook("select * from books where book_id="+bid);
-                    request.setAttribute("list", list);                    
+                    int bid = Integer.parseInt(request.getParameter("bid"));
+                    List<books> list = dao.getbook("select * from books where book_id=" + bid);
+                    request.setAttribute("list", list);
                     request.getRequestDispatcher("/jsp/CURD/updateBook.jsp")
                             .forward(request, response);
                 } else { //insert
@@ -55,14 +55,14 @@ public class BookController extends HttpServlet {
                     String imageURL = request.getParameter("imageURL");
                     books boo = new books(book_id, book_name, book_type_id, price, stock_quantity, description, imageURL);
                     dao.update(boo);
-                            
+
                     response.sendRedirect("BookURL");
                 }
             }
             if (service.equals("insertBook")) {
                 String submit = request.getParameter("submit");
                 if (submit == null) {// display form
-                    
+
                     request.getRequestDispatcher("/jsp/CURD/insertBook.jsp")
                             .forward(request, response);
                 } else { //insert
@@ -74,7 +74,7 @@ public class BookController extends HttpServlet {
                     String imageURL = request.getParameter("imageURL");
                     books boo = new books(book_name, book_type_id, price, stock_quantity, description, imageURL);
                     dao.add(boo);
-                            
+
                     response.sendRedirect("BookURL");
                 }
             }
@@ -86,9 +86,9 @@ public class BookController extends HttpServlet {
                     list = dao.getbook("select * from books");
                 } else { //search
                     String bname = request.getParameter("bname");
-                    list = dao.getbook("select * from books where book_name like '%"+bname+"%'");
+                    list = dao.getbook("select * from books where book_name like '%" + bname + "%'");
                 }
-                                
+
                 request.setAttribute("titleTable", "Book List");
                 // select view (jsp)
                 request.setAttribute("bookData", list);
@@ -99,12 +99,24 @@ public class BookController extends HttpServlet {
                 dispath.forward(request, response);
 
             }
+
+            if (service.equals("searchBook")) {
+                String book_name = request.getParameter("bname");
+                List<books> list = dao.getbook("SELECT * FROM books WHERE book_name LIKE '%" + book_name + "%'");
+                request.setAttribute("bookTypeData", list);
+                // select view (jsp)
+                RequestDispatcher dispath
+                        = request.getRequestDispatcher("/jsp/bookType.jsp");
+                //run (view)
+                dispath.forward(request, response);
+            }
         }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
-    /** 
+    /**
      * Handles the HTTP <code>GET</code> method.
+     *
      * @param request servlet request
      * @param response servlet response
      * @throws ServletException if a servlet-specific error occurs
@@ -112,12 +124,13 @@ public class BookController extends HttpServlet {
      */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
-    throws ServletException, IOException {
+            throws ServletException, IOException {
         processRequest(request, response);
-    } 
+    }
 
-    /** 
+    /**
      * Handles the HTTP <code>POST</code> method.
+     *
      * @param request servlet request
      * @param response servlet response
      * @throws ServletException if a servlet-specific error occurs
@@ -125,12 +138,13 @@ public class BookController extends HttpServlet {
      */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
-    throws ServletException, IOException {
+            throws ServletException, IOException {
         processRequest(request, response);
     }
 
-    /** 
+    /**
      * Returns a short description of the servlet.
+     *
      * @return a String containing servlet description
      */
     @Override

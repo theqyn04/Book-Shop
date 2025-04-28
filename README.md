@@ -17,4 +17,8 @@
 
 ### Connect me via: quyennguyen99000@gmail.com
 
+<<<<<<< HEAD
 ### © 2025 theqyn04
+=======
+### © 2025 theqyn04
+>>>>>>> bb6e4bc30207a24bd72773f6ff071ded0fb655c3
