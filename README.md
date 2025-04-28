@@ -15,10 +15,17 @@
 * This project uses JSP servlet pages for the front-end and MySql database at the back-end
 * README.md - this file itself
 
+![Ảnh local](https://github.com/theqyn04/Book-Shop/blob/main/web/img/demo_img/img1.png)
+
+![Ảnh local](https://github.com/theqyn04/Book-Shop/blob/main/web/img/demo_img/img2.png)
+
+![Ảnh local](https://github.com/theqyn04/Book-Shop/blob/main/web/img/demo_img/img3.png)
+
+![Ảnh local](https://github.com/theqyn04/Book-Shop/blob/main/web/img/demo_img/img4.png)
+
+![Ảnh local](https://github.com/theqyn04/Book-Shop/blob/main/web/img/demo_img/img5.png)
+
 ### Connect me via: quyennguyen99000@gmail.com
 
-<<<<<<< HEAD
 ### © 2025 theqyn04
-=======
-### © 2025 theqyn04
->>>>>>> bb6e4bc30207a24bd72773f6ff071ded0fb655c3
+
